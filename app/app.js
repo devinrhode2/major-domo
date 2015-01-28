@@ -1,16 +1,18 @@
-import Ember from 'ember';
-import Resolver from 'ember/resolver';
-import loadInitializers from 'ember/load-initializers';
-import config from './config/environment';
+import Ember from 'ember'
+import Resolver from 'ember/resolver'
+import loadInitializers from 'ember/load-initializers'
+import config from './config/environment'
 
-Ember.MODEL_FACTORY_INJECTIONS = true;
+Ember.MODEL_FACTORY_INJECTIONS = true
 
-var App = Ember.Application.extend({
-  modulePrefix: config.modulePrefix,
-  podModulePrefix: config.podModulePrefix,
-  Resolver: Resolver
-});
+App = Ember.Application.extend
+  modulePrefix    : config.modulePrefix
+  podModulePrefix : config.podModulePrefix
+  Resolver        : Resolver
 
-loadInitializers(App, config.modulePrefix);
+Date = window.Date or {}
+Date.now or Date.now = -> new Date().getTime()
 
-export default App;
+loadInitializers App, config.modulePrefix
+
+export default App
