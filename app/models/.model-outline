@@ -1,0 +1,29 @@
+Residence
+  hasMany:
+    -users
+    -chores
+    -expenses
+
+User
+  belongsTo residence
+  hasMany:
+    -tallies
+    -purchases
+
+
+Chore
+  belongsTo:
+    -residence
+
+Expense
+  belongsTo:
+    -residence
+
+
+Tally
+  user : DS.belongsTo()
+  chore: DS.belongsTo()
+
+Purchase
+  user   : DS.belognsTo()
+  expense: DS.belongsTo()
