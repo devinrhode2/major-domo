@@ -43,5 +43,10 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' " + (ENV.couch_hostname = 'http://localhost:5984'),
+     'script-src': "'self' http://ember-extension.s3.amazonaws.com"
+  };
+
   return ENV;
 };
