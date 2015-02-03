@@ -4,14 +4,13 @@ import config from './config/environment'
 Router = Ember.Router.extend
   location: config.locationType
 
-# Router.map ->
-#   @resource('residence', path: 'residences/:residence_id', ()->
-#     @route('new')
-#     @resource('chores')
-#     # @resource('user'     , path: 'users/:user_id'          , ()->
-#     #   @resource 'purchase' , path: 'purchases/:purchase_id'  , ()->
-#     #   @resource 'todo'     , path: 'todos/:todo_id'          , ()->
-#     #   @resource 'comment'  , path: 'comments/:comment_id'    , ()->
-#     # )
+Router.map ->
+  @resource 'residence', path: 'residences/:residence_id', ()->
+    @resource 'users', () ->
+      @route 'edit'
+    @resource 'chores', () ->
+      @route 'edit'
+    @resource 'expenses', () ->
+      @route 'edit'
 
 export default Router
