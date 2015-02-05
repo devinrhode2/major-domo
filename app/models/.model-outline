@@ -5,25 +5,53 @@ Residence
     -expenses
 
 User
-  belongsTo residence
+  belongsTo: residence
   hasMany:
     -tallies
     -purchases
 
-
 Chore
   belongsTo:
     -residence
+  hasMany:
+    -tallies
 
 Expense
   belongsTo:
     -residence
-
+  hasMany:
+    -purchases
 
 Tally
-  user : DS.belongsTo()
-  chore: DS.belongsTo()
+  belongsTo:
+    -user
+    -chore
 
 Purchase
-  user   : DS.belognsTo()
-  expense: DS.belongsTo()
+  belongsTo:
+    -user
+    -expense
+
+URLS:
+
+
+strongly persistent client side data for whether or not they have signed up yet. If they have signed up, then they just see a header and login form. If they haven't there's a little more pre-amble explaining the app before the signup form. Below the signup form, is a header "Not convinced? Or "Why a tallyboard?"
+
+
+/residence/:residence_id/users 
+/residence/:residence_id/users/edit <-- first page you see
+  -field to add/invite user
+  -name, email? email?
+  -list users, and if they've signed up
+
+
+Signup here {{jimmys roommmate}}
+invite url: /residence/:residence_id/
+ex: 
+
+
+/residence/:residence_id/chores
+/residence/:residence_id/chores/edit
+/residence/:residence_id/expenses
+/residence/:residence_id/expenses/edit
+
