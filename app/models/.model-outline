@@ -1,3 +1,13 @@
+# contribution model
+
+# purchase is type of contribution
+
+# chore is type of contribution
+
+# total contributions
+
+
+
 Residence
   hasMany:
     -users
