@@ -1,0 +1,23 @@
+<table class="tallyboard">
+  <tbody>
+    <tr>
+      {{#link-to tagName="td" class="settings-gear" action="makeEditable"}}
+        "(gear)"
+      {{/link-to}}
+      {{#each user in model.users}}
+        <th class="shorten?">{{user.name}}</th>
+      {{/each}}
+    </tr>
+    {{#each chore in chores}}
+      <tr>
+        <td><strong>
+          {{chore.name}}
+        </strong></td>
+        {{#each tally in chore.tallies}}
+          <td>{{tally}}</td>
+          {{ember-assert "Should log the same username twice:" tally.user.name user.name}}
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
