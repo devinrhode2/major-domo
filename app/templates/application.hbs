@@ -1,6 +1,11 @@
 
 
 <hr/>
+{{#if session.isAuthenticated}}
+  <a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+  <a {{ action 'authenticateSession' }}>Login</a>
+{{/if}}
 Alright baby let's get some login, chores+expenses tabs, and maybe those outlet animations
 <hr/>
 
