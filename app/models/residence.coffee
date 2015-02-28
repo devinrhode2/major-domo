@@ -4,7 +4,7 @@ export default DS.Model.extend
   users   : DS.hasMany 'user'
   chores  : DS.hasMany 'chore'
   expenses: DS.hasMany 'expense'
-  initiatedBy: DS.hasOne 'user'
+  name: DS.attr 'string'
 
 
   # allPurchases: ( () ->
@@ -39,6 +39,3 @@ export default DS.Model.extend
   # pointTotals: ( () ->
   #   this.get('allRelativeTallies')
   # ).property('allRelativeTallies')
-  # name: ( () ->
-  #   return this.get('name') or this.get('address')
-  # ).property('name', 'address')
