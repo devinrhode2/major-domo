@@ -10,7 +10,6 @@ App = Ember.Application.extend
   podModulePrefix : config.podModulePrefix
   Resolver        : Resolver
 
-Date = window.Date or {}
 Date.now or Date.now = -> new Date().getTime()
 
 loadInitializers App, config.modulePrefix
