@@ -4,7 +4,7 @@ export default DS.Model.extend
   residence     : DS.belongsTo 'residence'
   name          : DS.attr 'string'
 
-  purchases     : DS.hasMany 'tally'
+  purchases     : DS.hasMany 'purchase', defaultValue: []
 
   depletionTimes: DS.attr 'array', defaultValue: []
   lowTimes      : DS.attr 'array', defaultValue: []
