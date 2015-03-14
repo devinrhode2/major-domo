@@ -11,7 +11,7 @@
     "ember-cli-test-loader": "ember-cli/ember-cli-test-loader#0.1.1",
     "ember-load-initializers": "ember-cli/ember-load-initializers#0.0.2",
     "qunit": "~1.17.1",
-    "ember-simple-auth": "0.7.3"
+    "ember-simple-auth": "0.7.3",
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7"
   }
